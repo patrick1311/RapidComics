@@ -122,14 +122,6 @@ def get_comicpage(request):
     reviewList = Reviews.objects.raw('SELECT * FROM website_reviews '
                                      'WHERE ComicID = %s ORDER BY ReviewDate DESC', [comicId])
 
-    reviewtext = request.POST.get("textfield", None)
-    revDate = timezone.now()
-    user = request.user.username
-    if "review" in request.POST:
-        review = Reviews(ComicID=comicId, username=user, ReviewDate=revDate, ReviewText=reviewtext)
-        review.save()
-
-
     return render(request, 'comicpage.html', {'comic': comicList[0], 'characterList': characterList,
                                               'series': series[0], 'publisher': publisher[0],
                                               'storyArcList': storyArcList, 'writerList': writerList,
