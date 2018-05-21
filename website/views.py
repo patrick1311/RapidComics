@@ -130,6 +130,7 @@ def get_comicpage(request):
                                               'editorList': editorList, 'coverArtistList': coverArtistList,
                                               'reviewList': reviewList, 'userList': userList})
 
+  
 def get_characterpage(request):
     characterId = request.GET.get('id')
     characterList = Character.objects.raw('SELECT * FROM Characters WHERE CharacterID = %s', [characterId])
