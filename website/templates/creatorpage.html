@@ -59,7 +59,6 @@
                 {% else %}
                     <img id="image" src="static/images/default-profile.png">
                 {% endif %}
-
             </div>
 
             <div id ="infoCol">
@@ -125,7 +124,7 @@
             </div>
 
 				<div id="bio">
-					<p><b>Biography:</b> {{ creator.CreatorBiography|linebreaksbr }}</p>
+					<p><b>Biography:</b> {{ creator.CreatorBiography|linebreaks }}</p>
 				</div>
 
 			</div>

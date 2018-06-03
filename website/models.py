@@ -128,6 +128,8 @@ class Users(models.Model):
     user_picture = models.CharField(max_length=255)
     address = models.CharField(max_length=255)
     interests = models.CharField(max_length=255)
+    favorite_comic = models.CharField(max_length=255)
+    favorite_character = models.CharField(max_length=255)
 
     def __str__(self):
         return "ID: " + str(self.UserID) + "\tUserName: " + self.UserDisplayName
@@ -140,6 +142,7 @@ class Reviews(models.Model):
     username = models.CharField(max_length = 255)
     ReviewText = models.TextField()
     ReviewDate = models.DateTimeField()
+    EditDate = models.DateTimeField()
 
     def __str__(self):
         return str(self.user)
