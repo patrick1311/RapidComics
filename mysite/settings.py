@@ -25,7 +25,7 @@ SECRET_KEY = 'h-+j4q7_-eyxiiw(+3r)7b(4j2t$_xu10#krda)gcy^zub1mbw'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '18.217.53.245', 'localhost', 'rapidcomics.us-east-2.elasticbeanstalk.com/', 'rrcomic.us-east-2.elasticbeanstalk.com', 'rrtest.us-east-2.elasticbeanstalk.com']
+ALLOWED_HOSTS = ['127.0.0.1', '18.217.53.245', 'localhost', 'rapidcomics.us-west-1.elasticbeanstalk.com']
 
 
 # Application definition
@@ -77,10 +77,10 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'rrdb',
-        'USER': 'djangoAccess',
-        'PASSWORD': 'username',
-        'HOST': 'rrdatabase.c49pg9uv4mfe.us-east-2.rds.amazonaws.com',
+        'NAME': 'rapidcomics',
+        'USER': 'rapidcomics',
+        'PASSWORD': 'rapidcomicsdb',
+        'HOST': 'rapidcomicsdb.cyour94xo6x5.us-west-1.rds.amazonaws.com',
         'PORT': '3306'
     }
 }
